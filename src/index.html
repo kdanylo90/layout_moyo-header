@@ -17,6 +17,28 @@
     />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img
+        src="./images/logo.png"
+        alt="MOYO logo"
+        class="logo__image"
+        >
+      </a>
+      <nav>
+        <ul class="nav">
+          <li><a class="nav__link" href="apple.html">APPLE</a></li>
+          <li><a class="nav__link" href="samsumg.html">SAMSUNG</a></li>
+          <li><a class="nav__link" href="smartphones.html">SMARTPHONES</a></li>
+          <li class="nav__item">  <!-- Додаємо клас для батьківського елемента -->
+            <a class="nav__link is-active" data-qa="hover" href="laptops&computers.html">Laptops & computers</a>
+          </li>
+          <li><a class="nav__link" href="gadgets.html">GADGETS</a></li>
+          <li><a class="nav__link" href="tablets.html">TABLETS</a></li>
+          <li><a class="nav__link" href="photo.html">PHOTO</a></li>
+          <li><a class="nav__link" href="video.html">VIDEO</a></li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>

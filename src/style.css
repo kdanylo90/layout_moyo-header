@@ -1,3 +1,106 @@
-body {
-  margin: 0;
+:root {
+  --blue-color: #00acdc;
+  --nav-height: 60px;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  width: 100%;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__image {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  height: var(--nav-height);
+  color:black;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--blue-color);
+}
+
+.nav li:first-child .nav__link {
+  margin-left: 0;
+}
+
+.nav li:last-child .nav__link {
+  margin-right: 0;
+}
+
+.nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.is-active {
+  color: #00acdc;
+}
+
+.is-active::after {
+  content: '';
+  position: absolut;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00acdc;
+}
+
+
+/* Додаємо стилі для батьківського елемента */
+.nav__item {
+  position: relative;
+}
+
+/* Оновлюємо стилі для активного посилання */
+.nav__link.is-active {
+  color: var(--blue-color);
+}
+
+.nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue-color);
+}
+
